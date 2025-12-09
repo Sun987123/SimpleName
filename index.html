@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
-    <title>AI Watermark Studio</title>
+    <title>Water</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" defer></script>
@@ -366,6 +366,7 @@ const app = {
     init() {
         this.ctx = this.c.getContext('2d');
         this.lens.ctx = this.lens.c.getContext('2d');
+        this.c.width = 0; this.c.height = 0;
         this.lens.ctx.imageSmoothingEnabled = false;
         document.getElementById('fileInput').onchange = e => this.handleFiles(e.target.files);
         this.loadSettings();
